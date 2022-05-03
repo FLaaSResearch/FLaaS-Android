@@ -1,0 +1,126 @@
+{
+  "project_info": {
+    "project_number": "774982155912",
+    "project_id": "flaas-24902",
+    "storage_bucket": "flaas-24902.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774982155912:android:be728375bd5540ce47a93d",
+        "android_client_info": {
+          "package_name": "org.sensingkit.blueapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774982155912-msvhpo0qg1gbg5d5u1oqnb8bas8jiiq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw3Qo56Ph-p-EHq_VngRfRxrSPgsNm6Cw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774982155912-msvhpo0qg1gbg5d5u1oqnb8bas8jiiq8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774982155912:android:b4aaa84c69f93b7a47a93d",
+        "android_client_info": {
+          "package_name": "org.sensingkit.flaas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774982155912-msvhpo0qg1gbg5d5u1oqnb8bas8jiiq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw3Qo56Ph-p-EHq_VngRfRxrSPgsNm6Cw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774982155912-msvhpo0qg1gbg5d5u1oqnb8bas8jiiq8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774982155912:android:4b5535523528fbca47a93d",
+        "android_client_info": {
+          "package_name": "org.sensingkit.greenapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774982155912-msvhpo0qg1gbg5d5u1oqnb8bas8jiiq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw3Qo56Ph-p-EHq_VngRfRxrSPgsNm6Cw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774982155912-msvhpo0qg1gbg5d5u1oqnb8bas8jiiq8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774982155912:android:f83b959b342697dd47a93d",
+        "android_client_info": {
+          "package_name": "org.sensingkit.redapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774982155912-msvhpo0qg1gbg5d5u1oqnb8bas8jiiq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw3Qo56Ph-p-EHq_VngRfRxrSPgsNm6Cw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774982155912-msvhpo0qg1gbg5d5u1oqnb8bas8jiiq8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

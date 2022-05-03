@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.sensingkit.flaas">
+
+    <permission
+        android:name="org.sensingkit.flaas.permission.COMMUNICATE"
+        android:label="FLaaS App Communication"
+        android:protectionLevel="normal" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".PrivacyPolicyActivity"
+            android:label="FLaaS Privacy Policy"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name=".TNCActivity"
+            android:label="FLaaS Terms &amp; Conditions"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".QuestionnaireActivity"
+            android:excludeFromRecents="true"
+            android:label="Please complete this Questionnaire"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity=""
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true">
+            <meta-data
+                android:name="com.pushwoosh.log_level"
+                android:value="ERROR" />
+
+            <intent-filter>
+                <action android:name="${applicationId}.MESSAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
+        <receiver
+            android:name=".DeviceBootReceiver"
+            android:directBootAware="true"
+            android:enabled="false"
+            android:exported="false"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".FirebaseMessagingRouterService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.pushwoosh.appid"
+            android:value="APP-ID-KEY" />
+        <meta-data
+            android:name="com.pushwoosh.senderid"
+            android:value="@string/fcm_sender_id" />
+        <meta-data
+            android:name="com.pushwoosh.notification_service_extension"
+            android:value=".FLaaSNotificationService" />
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".FLaaSAppBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="org.sensingkit.flaas.permission.COMMUNICATE">
+            <intent-filter>
+                <action android:name="org.sensingkit.flaas.perform.SEND_STATUS" />
+                <action android:name="org.sensingkit.flaas.perform.REQUEST_SAMPLES" />
+                <action android:name="org.sensingkit.flaas.perform.SEND_SAMPLES" />
+                <action android:name="org.sensingkit.flaas.perform.SEND_WEIGHTS" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

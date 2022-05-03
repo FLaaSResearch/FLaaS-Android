@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.sensingkit.flaaslib">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="org.sensingkit.flaas.permission.COMMUNICATE" />
+
+    <queries>
+        <package android:name="org.sensingkit.flaas" />
+        <package android:name="org.sensingkit.redapp" />
+        <package android:name="org.sensingkit.greenapp" />
+        <package android:name="org.sensingkit.blueapp" />
+    </queries>
+
+    <application android:allowBackup="false">
+        <receiver android:name=".FLaaSLibBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="org.sensingkit.flaas.permission.COMMUNICATE">
+            <intent-filter>
+                <action android:name="org.sensingkit.flaas.perform.SEND_STATUS" />
+                <action android:name="org.sensingkit.flaas.perform.REQUEST_SAMPLES" />
+                <action android:name="org.sensingkit.flaas.perform.SEND_SAMPLES" />
+                <action android:name="org.sensingkit.flaas.perform.REQUEST_TRAINING" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

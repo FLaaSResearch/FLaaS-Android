@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FLaaS</string>
+    <string name="fcm_sender_id">SENDER-ID-KEY</string>
+</resources>
