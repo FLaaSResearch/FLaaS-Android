@@ -26,6 +26,7 @@ android {
     androidResources {
         noCompress 'tflite'
     }
+    namespace 'org.tensorflow.lite.examples.transfer.api'
 
 }
 

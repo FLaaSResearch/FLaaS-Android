@@ -27,6 +27,7 @@ android {
     androidResources {
         noCompress 'tflite', 'bin'
     }
+    namespace 'org.sensingkit.flaaslib'
 
     // needed for assets (do not compress them)
 }
